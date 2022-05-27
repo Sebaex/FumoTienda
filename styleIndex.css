@@ -1,0 +1,7 @@
+.carousel-control-next, .carousel-control-prev{
+    filter: invert(100%);
+}
+
+h2{
+    color: black;
+}

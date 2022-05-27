@@ -1,0 +1,19 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.col{
+    border: 2px solid gray;
+    margin: 5px;
+    background-color: white;
+}
+
+.col:hover {
+    box-shadow: 0 0 15px rgba(25,25,25,.2); 
+  }
+
+img{
+    width: 100%;
+    height: auto;
+}
