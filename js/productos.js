@@ -1,11 +1,12 @@
 let productos = JSON.parse(localStorage.getItem("productos"))
+
 var salida = ""
 
-var idProducto = ""
+var idDetalle = ""
 
 for (var producto of productos) {
-    salida = salida + "<a href='/productos/producto" + producto.id + ".html'>"
-    //salida = salida + "<a onclick='detalleProducto()'>"
+    //salida = salida + "<a onclick='idDetalle = " + producto.id + "; detalleProducto(idDetalle)' href='/productos/producto" + producto.id + ".html'>"
+    salida = salida + "<a onclick='idDetalle = " + producto.id + "; detalleProducto(idDetalle)'>"
     salida = salida + "<div class='col'>"
     salida = salida + "<img src='imgs/" + producto.foto + "' alt=''>"
     salida = salida + "<h5>" + producto.nombre + "</h5> <br>"
@@ -21,7 +22,8 @@ function cargarProducto() {
     document.getElementById("listadoProductos").innerHTML = salida    
 }
 
-function detalleProducto() {
+function detalleProducto(id) {
+    localStorage.setItem('idDetalle', id)
     document.location.href = 'verProducto.html';
 }
 
