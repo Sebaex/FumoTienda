@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
+    <script src="js/productos.js"></script>
     <link rel="stylesheet" href="styleListado.css">
     <title>Hello, world!</title>
 </head>
@@ -35,6 +35,9 @@
                         <a class="nav-link active" aria-current="page" href="contacto.html">Contáctenos</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="carrito.html">Carrito de Compras</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="login.html">Cerrar Sesión</a>
                     </li>
                 </ul>
@@ -44,88 +47,7 @@
 
     <div class="container">
         <h1 style="text-align: center;" >Productos Disponibles</h1> <br>
-        <div class="row row-cols-3 g-6" style="text-align: center;">
-            <a href="/productos/producto1.html">
-                <div class="col">
-                    <img src="/imgs/cirno.jpg" alt="">
-                    <h5>Peluche Cirno Touhou</h5> <br>
-                    Precio: $22.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto2.html">
-                <div class="col">
-                    <img src="/imgs/reimu.jpg" alt="">
-                    <h5>Peluche Hakurei Reimu Touhou </h5> <br>
-                    Precio: $22.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto3.html">
-                <div class="col">
-                    <img src="/imgs/youmu.jpg" alt="">
-                    <h5>Peluche Youmu Konpaku Touhou </h5> <br>
-                    Precio: $22.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto4.html">
-                <div class="col">
-                    <img src="/imgs/miku.jpg" alt="">
-                    <h5>Peluche Hatsune Miku Vocaloid </h5> <br>
-                    Precio: $35.490 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto5.html">
-                <div class="col">
-                    <img src="/imgs/rin.jpg" alt="">
-                    <h5>Peluche Kagamine Rin Vocaloid </h5> <br>
-                    Precio $35.490 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto6.html">
-                <div class="col">
-                    <img src="/imgs/len.jpg" alt="">
-                    <h5>Peluche Kagamine Len Vocaloid </h5> <br>
-                    Precio $35.490 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto7.html">
-                <div class="col">
-                    <img src="/imgs/madoka.jpg" alt="">
-                    <h5>Peluche XL Kaname Madoka </h5> <br>
-                    Precio $50.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto8.html">
-                <div class="col">
-                    <img src="/imgs/rei.jpg" alt="">
-                    <h5>Peluche Rei Ayanami </h5> <br>
-                    Precio $15.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto9.html">
-                <div class="col">
-                    <img src="/imgs/chayanne.jpg" alt="">
-                    <h5>Peluche Chayanne</h5> <br>
-                    Precio $12.990 <br> <br>
-                </div>
-            </a>
-
-            <a href="/productos/producto10.html">
-                <div class="col">
-                    <img src="/imgs/wick.jpg" alt="">
-                    <h5>Peluche Keanu Reeves</h5> <br>
-                    Precio $12.990 <br> <br>
-                </div>
-            </a>
-
-        </div>
+        <div class="row row-cols-3 g-6" style="text-align: center;" id="listadoProductos">
 
         <!-- Optional JavaScript; choose one of the two! -->
 
