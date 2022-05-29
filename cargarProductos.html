@@ -75,13 +75,15 @@
         let productos=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10]
 
         localStorage.setItem("productos", JSON.stringify(productos));
+        localStorage.setItem("carrito", "[]")
         setTimeout(() => {
-            
-        }, 3000);
+            document.location.href = 'login.html'
+        }, 1500);
     </script>
 
 </head>
 <body>
     <h1>Productos Cargados</h1>
+    <h1>Espere la redirección</h1>
 </body>
 </html>

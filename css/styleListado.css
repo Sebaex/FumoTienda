@@ -17,3 +17,9 @@ img{
     width: 100%;
     height: auto;
 }
+
+#alertaCarrito{
+    color: red;
+    font-size: small;
+    font-family: Calibri;
+}

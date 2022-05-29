@@ -44,7 +44,27 @@
             </div>
         </div>
     </nav> <br> <br>
-    <div class="container" id="detalleProducto"></div>
+    <div class="container" id="fichaProducto">
+        <div class='row row-cols-2 align-items-center'>
+            <div class='col-7'>
+                <span id="fotoProducto"></span>
+            </div>
+            <div class='col-5'>
+                <div class='row'>
+                    <span id="nombreProducto"></span>
+                </div>
+                <div class='row'>
+                    <span id="precioProducto"></span> <br>
+                    <h5 id="stockProducto"></h5> <br>
+                    Cantidad:
+                    <span><input type="number" value=1 style="width: 10%" min=1 id="cantidadCarrito"><span>
+                    <span id="alertaCarrito"></span>
+                </div> <br>
+                <div class='row'><button class='btn btn-primary' onclick='agregarCarrito()' id="agregaCarrito">Agregar Al Carrito</button></div>
+                <br>
+            </div>
+        </div>
+    </div>
     <hr style="border: 2px solid black; width: 90%; margin: auto"> <br> <br>
 
     <div class="container">
