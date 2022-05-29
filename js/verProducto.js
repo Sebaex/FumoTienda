@@ -40,17 +40,9 @@ function agregarCarrito() {
             "foto": productoDetalle.foto,
             "stock": productoDetalle.stock,
             "precio": productoDetalle.precio,
-            "cantidad": stockCarrito
+            "cantidad": stockCarrito,
+            "subtotal": parseInt(productoDetalle.precio) * parseInt(document.getElementById("cantidadCarrito").value)
         }
-        /*
-        Si el carrito contiene productos:
-            Buscar si el producto existe en el carrito
-            Si el producto existe:
-                Actualizar su cantidad
-            Si no:
-                Agregar al carrito
-        */
-
         let encontrado = 0
         if (tempCarrito.length == 0) {
             tempCarrito.push(productoCarrito)
@@ -64,6 +56,7 @@ function agregarCarrito() {
             }
             if (encontrado == 1) {
                 producto.cantidad = String(parseInt(producto.cantidad) + parseInt(productoCarrito.cantidad))
+                producto.subtotal = producto.cantidad * producto.precio
             }
             else{
                 tempCarrito.push(productoCarrito)

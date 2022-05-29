@@ -1,0 +1,17 @@
+.fichaProducto{
+    display: flex;
+}
+#cuerpoCarrito{
+    display: flex;
+}
+#cuerpoProductos{
+    width: 70%;
+}
+#cuerpoPrecios{
+    width: 30%;
+}
+#alertaStock{
+    color: red;
+    font-size: large;
+    font-family: Calibri;
+}
