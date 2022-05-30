@@ -35,7 +35,15 @@ function realizarCompra() {
         }
     }
     if (insuficiente == 0) {
+        for (let producto of carrito) {
+            for (let productoAlmacenado of listado) {
+                if(producto.id == productoAlmacenado.id){
+                    productoAlmacenado.stock = parseInt(productoAlmacenado.stock) - parseInt(producto.cantidad)
+                }
+            }
+        }
         localStorage.setItem("carrito", "[]")
+        localStorage.setItem("productos", JSON.stringify(listado))
         carrito = JSON.parse(localStorage.getItem("carrito"))
         cargarCarrito()
         document.getElementById("confirmarCompra").innerHTML = "<h5>Gracias por su compra!</h5>"

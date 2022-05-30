@@ -21,7 +21,7 @@ function cargarDetalle() {
     document.getElementById("stockProducto").innerHTML = stockProducto
 }
 function agregarCarrito() {
-    let stockCarrito = document.getElementById("cantidadCarrito").value
+    let stockCarrito = parseInt(document.getElementById("cantidadCarrito").value)
     if (stockCarrito < 1) {
         document.getElementById("alertaCarrito").innerHTML = "Ingrese un Valor valido"
     } else if (stockCarrito > productoDetalle.stock) {
@@ -38,7 +38,6 @@ function agregarCarrito() {
             "id": productoDetalle.id,
             "nombre": productoDetalle.nombre,
             "foto": productoDetalle.foto,
-            "stock": productoDetalle.stock,
             "precio": productoDetalle.precio,
             "cantidad": stockCarrito,
             "subtotal": parseInt(productoDetalle.precio) * parseInt(document.getElementById("cantidadCarrito").value)
