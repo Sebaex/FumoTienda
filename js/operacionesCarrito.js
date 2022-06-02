@@ -7,9 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
-function eliminarProducto() {
+function eliminarProducto(idEliminar) {
     for (let producto of carrito) {
-        carrito.splice(carrito.indexOf(producto), 1)
+        if(idEliminar == producto.id){
+            carrito.splice(carrito.indexOf(producto), 1)
+            break;
+        }
     }
 
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -52,7 +55,7 @@ function cargarCarrito() {
         salida = "<h3>El carrito está vacío.</h3>"
     } else {
         for (let producto of carrito) {
-        salida = salida + "<div class='fichaProducto' id='" + producto.id + "' >"
+        salida = salida + "<div class='fichaProducto'>"
         salida = salida + "<img src='imgs/" + producto.foto + "' alt='' style='width: 25%; height: auto;'>"
         salida = salida + "<div class='descripcionProducto'>"
         salida = salida + "<h3>" + producto.nombre + "</h3>"
@@ -60,7 +63,7 @@ function cargarCarrito() {
         salida = salida + "<div> Cantidad: " + producto.cantidad + "</div>"
         salida = salida + "<div> Subtotal: $" + producto.subtotal + "</div>"
         salida = salida + "<div id='alertaStock'></div>"
-        salida = salida + "<button type='button' class='btn btn-danger' onclick='eliminarProducto()'>Eliminar</button>"
+        salida = salida + "<button type='button' class='btn btn-danger' onclick='eliminarProducto(" + producto.id + ")'>Eliminar</button>"
         salida = salida + "</div>"
         salida = salida + "</div> <br>"
         total = total + producto.subtotal
